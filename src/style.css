@@ -1,0 +1,42 @@
+#app, body{
+  font-family: "Montserrat", sans-serif;
+  background-color:#F4F1F2 !important;
+}
+
+.inputGroup{
+  margin-top: 15px;
+  color: #727272;
+}
+.inputGroup label{
+  padding-bottom: 5px;
+  font-size: 13px;
+}
+
+.inputGroup input{
+  border: 1px solid #d1d1d1;
+  padding: 5px 15px;
+  border-radius: 100px;
+  font-size: 14px ;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+input:focus-visible{
+  outline: 2px solid #20986E;
+}
+
+.generalButton{
+  background-color: #20986E;
+  color: #fff;
+  border: 0;
+  border-radius: 100px;
+  padding: 5px 20px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+a{
+  color: #20986E !important;
+  font-weight: 500;
+}
