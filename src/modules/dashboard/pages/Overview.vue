@@ -1,9 +1,16 @@
+<script setup>
+import BarChart from '@/components/BarChart.vue';
+
+const anni = ['2021', '2022', '2023', '2024', '2025', '2026']
+const fatturato = [12000, 18000, 15000, 22000, 37450, 84500]
+</script>
+
 <template>
 
   <div class="containerBoxStatsDashboard">
     <div class="d-flex align-items-center justify-content-between">
       <div>
-        <div><b>Fatturato YTD</b> <i class="bi bi-question-circle"></i></div>
+        <div><b>Vendite YTD</b> <i class="bi bi-question-circle"></i></div>
         <div class="fatturatoYTD">
           <div class="numberStyleGeneral">
             &euro;84.500<span>,82</span>
@@ -20,7 +27,7 @@
       <div class="d-flex align-items-stratch gap-3">
 
         <div class="boxMainData">
-          <b>Totale costi</b> <i class="bi bi-question-circle"></i>
+          <b>Costo materiali</b> <i class="bi bi-question-circle"></i>
           <div class="numberStyleGeneral">
             €46.475<span>,82</span>
           </div>
@@ -72,7 +79,7 @@
             <span class="pe-2">Fornitura Materiali</span> <b>€12.600</b>
           </div>
         </div>
-        
+
         <div class="totalPillowDatabar">
           Totale: <b style="color: var(--primary-color);">€60.250</b>
         </div>
@@ -84,7 +91,11 @@
     </div>
 
     <div class="containerGraficoFatturato spacerTop">
-      <div><b>Grafico Fatturato</b> <i class="bi bi-question-circle"></i></div>
+      <div><b>Grafico Vendite</b> <i class="bi bi-question-circle"></i></div>
+
+      <div class="chartFatturatoContainer">
+        <BarChart :labels="anni" :data="fatturato" label="Fatturato (€)" />
+      </div>
     </div>
 
 
@@ -93,13 +104,17 @@
 </template>
 
 <style>
-.containerGraficoFatturato{
+.chartFatturatoContainer{
+  height: 450px;
+}
+
+.containerGraficoFatturato {
   background-color: #f6f6f6;
   padding: 20px;
   border-radius: 20px;
 }
 
-.buttonBarData{
+.buttonBarData {
   background-color: var(--positive);
   border: 0;
   padding: 10px 20px;
@@ -109,17 +124,18 @@
   font-weight: 600;
 }
 
-.totalPillowDatabar{
+.totalPillowDatabar {
   font-size: 13px;
 }
-.pillowDataBar{
+
+.pillowDataBar {
   padding: 10px;
   background-color: #fff;
   border-radius: 100px;
   font-size: 13px;
 }
 
-.threeDataBar{
+.threeDataBar {
   background-color: #f6f6f6;
   padding: 10px;
   border-radius: 100px;

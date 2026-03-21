@@ -25,18 +25,33 @@
         <div>
           Moduli <i class="bi bi-arrow-down-short"></i>
           <div class="d-flex flex-column mt-2 ps-2">
-            <router-link to="/magazzino"><i class="bi bi-arrow-return-right pe-2"></i>Magazzino</router-link>
-            <router-link to="/officina"><i class="bi bi-arrow-return-right pe-2"></i>Officina</router-link>
+            <div class="moduleList activeModule">
+              <router-link to="/officina">
+                <i class="bi bi-arrow-return-right pe-2"></i>Officina
+              </router-link> 
+              <router-link to="/officina/calendario"class="mt-1">
+                Calendario
+              </router-link>             
+            </div>
+            <div class="moduleList activeModule">
+              <router-link to="/officina">
+                <i class="bi bi-arrow-return-right pe-2"></i>Note Spese
+              </router-link> 
+              <router-link to="/officina/calendario"class="mt-1">
+                Utenti app
+              </router-link>             
+            </div>
+
           </div>
         </div>
-        <router-link to="/magazzino" class="mt-3">
-          <div class="dotActive"></div>Notifiche
-        </router-link>
-        <router-link to="/officina">
+        <router-link to="/agenda" class="mt-2">
           <div class="dotActive"></div>Agenda
         </router-link>
-        <router-link to="/officina">
-          <div class="dotActive"></div>Promemoria
+        <router-link to="/notifiche">
+          <div class="dotActive"></div>Notifiche
+        </router-link>
+        <router-link to="/ticket">
+          <div class="dotActive"></div>Ticket assistenza
         </router-link>
       </div>
 
@@ -69,6 +84,20 @@
 </template>
 
 <style>
+.moduleList > a:not(a:first-child) {
+  display: none ;
+}
+
+.moduleList.activeModule > a {
+  display: block !important;
+}
+
+.activeModule{
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 10px;
+}
+
 .containerAsideMenu a {
   display: flex;
   align-items: center;
@@ -102,6 +131,7 @@
   flex: 1;
   height: 100%;
   padding: 30px;
+  overflow: auto;
 }
 
 .containerModule {
@@ -110,6 +140,7 @@
   flex: 1;
   padding: 40px;
   border-radius: 30px;
+  min-height: 80vh;
 }
 
 .containerAsideMenu * {

@@ -12,6 +12,15 @@ import "@fontsource/montserrat/500.css"
 import "@fontsource/montserrat/600.css"
 import "@fontsource/montserrat/700.css"
 
+// 👇 AG GRID
+import { AllCommunityModule, ModuleRegistry } from 'ag-grid-community';
+
+// Register all Community features
+ModuleRegistry.registerModules([AllCommunityModule]);
+
+/* import 'ag-grid-community/styles/ag-grid.css'
+import 'ag-grid-community/styles/ag-theme-alpine.css'
+ */
 const app = createApp(App)
 
 app.use(createPinia())

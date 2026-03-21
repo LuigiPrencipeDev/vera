@@ -24,4 +24,24 @@
   color: #989898;
   cursor: pointer;
 }
+
+.miniText{
+  font-size: 12px;
+  color: #6d6d6d;
+}
+
+.greenButton,.genericButton{
+  font-size: 12px;
+  color: #000;
+  background-color: #f6f6f6;
+  padding: 5px 25px;
+  border: 1px solid #d1d1d1;
+  border-radius: 100px;
+  transition: all 0.2s ease-in-out;
+  /* font-weight: 500; */
+}
+
+.greenButton:hover{
+  background-color: var(--positive);
+}
 </style>
