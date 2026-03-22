@@ -8,6 +8,11 @@ export default [
         path: "calendario",
         name: "officina-calendario",
         component: () => import("./pages/OfficinaCalendario.vue")
+      },
+      {
+        path: "lavorazione",
+        name: "officina-lavorazione",
+        component: () => import("./pages/OfficinaLavorazione.vue")
       }
     ]
   }

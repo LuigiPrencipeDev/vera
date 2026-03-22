@@ -8,8 +8,8 @@
   color: #727272;
 }
 .inputGroup label{
-  padding-bottom: 5px;
-  font-size: 13px;
+  /* padding-bottom: 5px; */
+  font-size: 12px;
 }
 
 .inputGroup input{
@@ -39,4 +39,8 @@ input:focus-visible{
 a{
   color: #20986E !important;
   font-weight: 500;
+}
+
+.bi-trash3-fill{
+  cursor: pointer;
 }

@@ -36,6 +36,35 @@ export default [
             component: () =>
               import("@/modules/officine/pages/OfficinaCalendario.vue"),
           },
+          {
+            path: "lavorazione", // ✅ CORRETTO
+            name: "officina-lavorazione",
+            component: () =>
+              import("@/modules/officine/pages/OfficinaLavorazione.vue"),
+          },
+        ],
+      },
+      {
+        path: "note-spese",
+        component: () => import("@/modules/noteSpese/pages/NoteSpeseContainer.vue"),
+        children: [
+           {
+            path: "", // ✅ CORRETTO
+            name: "note-spese-home",
+            component: () => import("@/modules/noteSpese/pages/NoteSpeseHome.vue"),
+          },
+          /*{
+            path: "calendario", // ✅ CORRETTO
+            name: "officina-calendario",
+            component: () =>
+              import("@/modules/officine/pages/OfficinaCalendario.vue"),
+          },
+          {
+            path: "lavorazione", // ✅ CORRETTO
+            name: "officina-lavorazione",
+            component: () =>
+              import("@/modules/officine/pages/OfficinaLavorazione.vue"),
+          }, */
         ],
       },
     ],

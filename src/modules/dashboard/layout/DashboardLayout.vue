@@ -32,9 +32,12 @@
               <router-link to="/officina/calendario"class="mt-1">
                 Calendario
               </router-link>             
+              <router-link to="/officina/lavorazione"class="mt-1">
+                + Agg. lavorazione
+              </router-link>             
             </div>
             <div class="moduleList activeModule">
-              <router-link to="/officina">
+              <router-link to="/note-spese">
                 <i class="bi bi-arrow-return-right pe-2"></i>Note Spese
               </router-link> 
               <router-link to="/officina/calendario"class="mt-1">

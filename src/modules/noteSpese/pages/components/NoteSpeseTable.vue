@@ -13,39 +13,22 @@ const myTheme = themeQuartz.withParams({
 });
 
 const columnDefs = ref([
-    { field: 'targa', headerName: 'Targa', flex: 1 },
-    { field: 'cliente', headerName: 'Cliente', flex: 1 },
-    { 
-        field: 'avanzamento', 
-        headerName: 'Avanzamento', 
-        flex: 1.5, // Diamo un po' più di spazio alla barra
-        cellRenderer: (params) => {
-            // params.value è il numero (es. 80)
-            const val = params.value || 0;
-            
-            // Ritorniamo l'HTML della barra di Bootstrap
-            return `
-            <div class="h-100 d-flex align-items-center w-100">
-                <div class="progress w-100" style="height: 20px; background-color: #e9ecef; border-radius: 10px;">
-                    <div class="progress-bar" role="progressbar" 
-                        style="width: ${val}%;font-size:11px; background-color: #20986E; border-radius: 100px; height: 100%; display: flex; align-items: center; justify-content: center;" 
-                        aria-valuenow="${val}" aria-valuemin="0" aria-valuemax="100">
-                        <b>${val}%</b>
-                    </div>
-                </div>                
-            </div>
-            `;
-        }
-    },
-    { field: 'Data presa in carico', headerName: 'Data presa in carico', flex: 1 },
-    { field: 'Data prevista consegna', headerName: 'Data prevista consegna', flex: 1 },
+    { field: 'codice', headerName: 'Codice', flex: 1 },
+    { field: 'rimborso', headerName: 'Rimborso', flex: 1 },
+    { field: 'dipendente', headerName: 'Dipendente', flex: 1 },
+    { field: 'tipologia', headerName: 'Tipologia', flex: 1 },
+    { field: 'fornitore', headerName: 'Fornitore', flex: 1 },
+    { field: 'data-spesa', headerName: 'Data spesa', flex: 1 },
 
 ])
 
 const rowData = ref([
-    { targa: 'EC055ZY', cliente: 'Luigi Prencipe', avanzamento: 80, 'Data presa in carico': '01-10-2023', 'Data prevista consegna': '15-10-2023' },
-    { targa: 'AB123CD', cliente: 'Maria Rossi', avanzamento: 50, 'Data presa in carico': '05-10-2023', 'Data prevista consegna': '20-10-2023' },
-    { targa: 'XY987ZT', cliente: 'Giovanni Bianchi', avanzamento: 30, 'Data presa in carico': '10-10-2023', 'Data prevista consegna': '25-10-2023' },
+    { codice: 'NS001', rimborso: '150 €', dipendente: 'Mario Rossi', tipologia: 'Viaggio', fornitore: 'Trenitalia', 'data-spesa': '2024-05-10' },
+    { codice: 'NS002', rimborso: '80 €', dipendente: 'Luigi Bianchi', tipologia: 'Pasti', fornitore: 'Autogrill', 'data-spesa': '2024-05-12' },
+    { codice: 'NS003', rimborso: '200 €', dipendente: 'Giulia Verdi', tipologia: 'Alloggio', fornitore: 'Hotel Roma', 'data-spesa': '2024-05-15' },
+    { codice: 'NS004', rimborso: '50 €', dipendente: 'Francesca Neri', tipologia: 'Materiale', fornitore: 'Cartoleria XYZ', 'data-spesa': '2024-05-18' },
+    { codice: 'NS005', rimborso: '120 €', dipendente: 'Alessandro Russo', tipologia: 'Viaggio', fornitore: 'Italo Treno', 'data-spesa': '2024-05-20' },
+    
 
 ])
 
@@ -55,9 +38,9 @@ const search = ref('')
     <div>
         <div class="d-flex align-items-center justify-content-between mt-5">
             <div>
-                <b>Auto in lavorazione</b>
+                <b>Note spese</b>
                 <div class="miniText">
-                    Visualizza tutte le auto attualmente in lavorazione
+                    Visualizza tutte le note spese
                 </div>
             </div>
             <div class="inputGroup">
