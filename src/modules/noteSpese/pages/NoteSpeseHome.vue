@@ -1,6 +1,6 @@
 <script>
-import NoteSpeseData from "./components/NoteSpeseData.vue";
-import NoteSpeseTable from "./components/NoteSpeseTable.vue";
+import NoteSpeseData from "../components/NoteSpeseData.vue";
+import NoteSpeseTable from "../components/NoteSpeseTable.vue";
 export default {
     name: "NoteSpeseHome",
 

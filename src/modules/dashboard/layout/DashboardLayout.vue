@@ -40,7 +40,7 @@
               <router-link to="/note-spese">
                 <i class="bi bi-arrow-return-right pe-2"></i>Note Spese
               </router-link> 
-              <router-link to="/officina/calendario"class="mt-1">
+              <router-link to="/note-spese/app"class="mt-1">
                 Utenti app
               </router-link>             
             </div>

@@ -23,12 +23,14 @@ export default [
 
       {
         path: "officina",
-        component: () => import("@/modules/officine/pages/ContainerOfficina.vue"),
+        component: () =>
+          import("@/modules/officine/pages/ContainerOfficina.vue"),
         children: [
           {
             path: "", // ✅ CORRETTO
             name: "officina-home",
-            component: () => import("@/modules/officine/pages/OfficinaHome.vue"),
+            component: () =>
+              import("@/modules/officine/pages/OfficinaHome.vue"),
           },
           {
             path: "calendario", // ✅ CORRETTO
@@ -45,21 +47,40 @@ export default [
         ],
       },
       {
-        path: "note-spese",
-        component: () => import("@/modules/noteSpese/pages/NoteSpeseContainer.vue"),
+        path: "dipendenti",
+        /* component: () => import("@/modules/noteSpese/pages/NoteSpeseContainer.vue"), */
         children: [
-           {
+          {
             path: "", // ✅ CORRETTO
-            name: "note-spese-home",
-            component: () => import("@/modules/noteSpese/pages/NoteSpeseHome.vue"),
-          },
-          /*{
-            path: "calendario", // ✅ CORRETTO
-            name: "officina-calendario",
-            component: () =>
-              import("@/modules/officine/pages/OfficinaCalendario.vue"),
+            name: "dipendenti",
+            /* component: () => import("@/modules/noteSpese/pages/NoteSpeseHome.vue"), */
           },
           {
+            path: "nuovo-dipendente", // ✅ CORRETTO
+            name: "nuovo-dipendente",
+            /* component: () => import("@/modules/noteSpese/pages/NoteSpeseHome.vue"), */
+          },
+          {
+            path: "timbratore", // ✅ CORRETTO
+            name: "timbratore",
+            /* component: () => import("@/modules/noteSpese/pages/NoteSpeseApp.vue"), */
+          },
+          {
+            path: "presenze", // ✅ CORRETTO
+            name: "presenze",
+            /* component: () => import("@/modules/noteSpese/pages/NoteSpeseApp.vue"), */
+          },
+          {
+            path: "calendario-ferie-permessi", // ✅ CORRETTO
+            name: "calendario-ferie-permessi",
+            /* component: () => import("@/modules/noteSpese/pages/NoteSpeseApp.vue"), */
+          },
+          {
+            path: "note-spese", // ✅ CORRETTO
+            name: "note-spese",
+            /* component: () => import("@/modules/noteSpese/pages/NoteSpeseApp.vue"), */
+          },
+          /*{
             path: "lavorazione", // ✅ CORRETTO
             name: "officina-lavorazione",
             component: () =>
