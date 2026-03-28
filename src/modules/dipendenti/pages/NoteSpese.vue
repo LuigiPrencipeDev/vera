@@ -6,9 +6,9 @@
 
     <div>
         <div>
-            <b>Abilita gli utenti</b>
+            <b>Note e Spese</b>
             <div class="miniText">
-                In questa sezione è possibile abilitare gli utenti alla gestione delle note spese.
+                In questa sezione è possibile gestire le note e le spese dei dipendenti.
             </div>
         </div>
     </div>

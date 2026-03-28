@@ -42,7 +42,9 @@
 }
 
 .greenButton:hover {
-  background-color: var(--positive);
+  background-color: var(--primary-color);
+  color: #fff;
+  border: 1px solid var(--primary-color);
 }
 
 .officineBoxData {

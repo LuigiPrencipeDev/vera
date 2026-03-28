@@ -37,12 +37,27 @@
               </router-link>             
             </div>
             <div class="moduleList activeModule">
-              <router-link to="/note-spese">
-                <i class="bi bi-arrow-return-right pe-2"></i>Note Spese
+              <router-link to="/dipendenti">
+                <i class="bi bi-arrow-return-right pe-2"></i>Dipendenti
               </router-link> 
-              <router-link to="/note-spese/app"class="mt-1">
-                Utenti app
-              </router-link>             
+              <router-link to="/dipendenti/nuovo-dipendente"class="mt-1">
+                Nuovo dipendente
+              </router-link>                 
+              <router-link to="/dipendenti/presenze"class="mt-1">
+                Presenze
+              </router-link>                 
+              <router-link to="/dipendenti/calendario-ferie-permessi"class="mt-1">
+                Calendario ferie permessi
+              </router-link>                 
+              <router-link to="/dipendenti/note-spese"class="mt-1">
+                Note spese
+              </router-link>                 
+              <router-link to="/dipendenti/timbratore"class="mt-1">
+                Timbratore
+              </router-link>                 
+              <router-link to="/dipendenti/mansioni"class="mt-1">
+                Crea mansioni
+              </router-link>                 
             </div>
 
           </div>

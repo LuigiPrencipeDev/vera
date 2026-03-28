@@ -51,9 +51,9 @@ const fatturato = [12000, 18000, 15000, 22000, 37450, 84500]
         </div>
 
         <div class="boxMainData">
-          <b>Magazzino con più valore</b> <i class="bi bi-question-circle"></i>
+          <b>Costo personale</b> <i class="bi bi-question-circle"></i>
           <div class="numberStyleGeneral">
-            €8.900<span>,82</span>
+            €71.220<span>,82</span>
           </div>
           <div class="d-flex align-items-center justify-content-end">
             <div class="buttonArrow">

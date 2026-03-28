@@ -1,5 +1,5 @@
 <script>
-import CalendarOfficine from './components/CalendarOfficine.vue';
+import CalendarOfficine from '../components/CalendarOfficine.vue';
 export default {
     name: 'OfficinaCalendario',
     components: {

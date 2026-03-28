@@ -1,6 +1,6 @@
 <script>
-import OfficineData from "./components/OfficineData.vue";
-import OfficineTable from "./components/OfficineTable.vue";
+import OfficineData from "../components/OfficineData.vue";
+import OfficineTable from "../components/OfficineTable.vue";
 export default {
     name: "ContainerOfficina",
 

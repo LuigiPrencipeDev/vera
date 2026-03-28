@@ -48,44 +48,43 @@ export default [
       },
       {
         path: "dipendenti",
-        /* component: () => import("@/modules/noteSpese/pages/NoteSpeseContainer.vue"), */
+        component: () => import("@/modules/dipendenti/pages/DipendentiContainer.vue"),
         children: [
           {
             path: "", // ✅ CORRETTO
             name: "dipendenti",
-            /* component: () => import("@/modules/noteSpese/pages/NoteSpeseHome.vue"), */
+            component: () => import("@/modules/dipendenti/pages/DipendentiHome.vue")
           },
           {
             path: "nuovo-dipendente", // ✅ CORRETTO
             name: "nuovo-dipendente",
-            /* component: () => import("@/modules/noteSpese/pages/NoteSpeseHome.vue"), */
-          },
-          {
-            path: "timbratore", // ✅ CORRETTO
-            name: "timbratore",
-            /* component: () => import("@/modules/noteSpese/pages/NoteSpeseApp.vue"), */
+            component: () => import("@/modules/dipendenti/pages/NuovoDipendente.vue")
           },
           {
             path: "presenze", // ✅ CORRETTO
             name: "presenze",
-            /* component: () => import("@/modules/noteSpese/pages/NoteSpeseApp.vue"), */
+            component: () => import("@/modules/dipendenti/pages/Presenze.vue"),
           },
           {
             path: "calendario-ferie-permessi", // ✅ CORRETTO
             name: "calendario-ferie-permessi",
-            /* component: () => import("@/modules/noteSpese/pages/NoteSpeseApp.vue"), */
+            component: () => import("@/modules/dipendenti/pages/CalendarioFeriePermessi.vue"),
           },
           {
             path: "note-spese", // ✅ CORRETTO
             name: "note-spese",
-            /* component: () => import("@/modules/noteSpese/pages/NoteSpeseApp.vue"), */
+            component: () => import("@/modules/dipendenti/pages/NoteSpese.vue"),
           },
-          /*{
-            path: "lavorazione", // ✅ CORRETTO
-            name: "officina-lavorazione",
-            component: () =>
-              import("@/modules/officine/pages/OfficinaLavorazione.vue"),
-          }, */
+          {
+            path: "timbratore", // ✅ CORRETTO
+            name: "timbratore",
+            component: () => import("@/modules/dipendenti/pages/Timbratore.vue"),
+          },
+          {
+            path: "mansioni", // ✅ CORRETTO
+            name: "mansioni",
+            component: () => import("@/modules/dipendenti/pages/Mansioni.vue"),
+          },
         ],
       },
     ],
