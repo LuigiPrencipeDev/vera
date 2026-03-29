@@ -32,24 +32,29 @@ const percentClassRules = {
 
 const columnDefs = ref([
     { field: 'dipendente', headerName: 'Dipendente', flex: 5 },
-    { field: 'gennaio', headerName: 'G', flex: 1, cellClassRules: percentClassRules },
-    { field: 'febbraio', headerName: 'F', flex: 1, cellClassRules: percentClassRules },
-    { field: 'marzo', headerName: 'M', flex: 1, cellClassRules: percentClassRules },
-    { field: 'aprile', headerName: 'A', flex: 1, cellClassRules: percentClassRules },
-    { field: 'maggio', headerName: 'M', flex: 1, cellClassRules: percentClassRules },
-    { field: 'giugno', headerName: 'G', flex: 1, cellClassRules: percentClassRules },
-    { field: 'luglio', headerName: 'L', flex: 1, cellClassRules: percentClassRules },
-    { field: 'agosto', headerName: 'A', flex: 1, cellClassRules: percentClassRules },
-    { field: 'settembre', headerName: 'S', flex: 1, cellClassRules: percentClassRules },
-    { field: 'ottobre', headerName: 'O', flex: 1, cellClassRules: percentClassRules },
-    { field: 'novembre', headerName: 'N', flex: 1, cellClassRules: percentClassRules },
-    { field: 'dicembre', headerName: 'D', flex: 1, cellClassRules: percentClassRules },
+    { field: 'gennaio', headerName: 'Gen', flex: 1, cellClassRules: percentClassRules },
+    { field: 'febbraio', headerName: 'Feb', flex: 1, cellClassRules: percentClassRules },
+    { field: 'marzo', headerName: 'Mar', flex: 1, cellClassRules: percentClassRules },
+    { field: 'aprile', headerName: 'Apr', flex: 1, cellClassRules: percentClassRules },
+    { field: 'maggio', headerName: 'Mag', flex: 1, cellClassRules: percentClassRules },
+    { field: 'giugno', headerName: 'Giu', flex: 1, cellClassRules: percentClassRules },
+    { field: 'luglio', headerName: 'Lug', flex: 1, cellClassRules: percentClassRules },
+    { field: 'agosto', headerName: 'Ago', flex: 1, cellClassRules: percentClassRules },
+    { field: 'settembre', headerName: 'Set', flex: 1, cellClassRules: percentClassRules },
+    { field: 'ottobre', headerName: 'Ott', flex: 1, cellClassRules: percentClassRules },
+    { field: 'novembre', headerName: 'Nov', flex: 1, cellClassRules: percentClassRules },
+    { field: 'dicembre', headerName: 'Dic', flex: 1, cellClassRules: percentClassRules },
+    { field: 'action', headerName: 'Azioni', cellClass: 'text-center', flex: 1, cellRenderer: (params) => {
+        return `<a href="#" class=""><i class="bi bi-eye-fill"></i></a>`
+    } },
 ])
 
-const rowData = ref([
+const rowData = ref([ 
     { dipendente: 'Mario Rossi', gennaio: '100%', febbraio: '94%', marzo: '99%', aprile: '87%', maggio: '88%', giugno: '100%', luglio: '66%', agosto: '66%', settembre: '100%', ottobre: '110%', novembre: '105%', dicembre: '80%' },
     { dipendente: 'Luigi Bianchi', gennaio: '100%', febbraio: '100%', marzo: '100%', aprile: '100%', maggio: '100%', giugno: '100%', luglio: '100%', agosto: '100%', settembre: '100%', ottobre: '100%', novembre: '100%', dicembre: '100%' },
     { dipendente: 'Giulia Verdi', gennaio: '90%', febbraio: '85%', marzo: '95%', aprile: '80%', maggio: '90%', giugno: '95%', luglio: '85%', agosto: '85%', settembre: '90%', ottobre: '95%', novembre: '90%', dicembre: '85%' },
+    { dipendente: 'Francesca Neri', gennaio: '110%', febbraio: '105%', marzo: '120%', aprile: '100%', maggio: '110%', giugno: '115%', luglio: '120%', agosto: '120%', settembre: '110%', ottobre: '130%', novembre: '125%', dicembre: '115%' },
+    { dipendente: 'Alessandro Gialli', gennaio: '100%', febbraio: '100%', marzo: '85%', aprile: '100%', maggio: '80%', giugno: '90%', luglio: '75%', agosto: '100', settembre: '80%', ottobre: '100%', novembre: '100%', dicembre: '100%' },
 ])
 
 const mesi = [

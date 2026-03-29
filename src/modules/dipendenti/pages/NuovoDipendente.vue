@@ -28,7 +28,7 @@ const giorniLavorativi = ref([])
                 </div>
                 <div class="inputGroup">
                     <label for="dataNascita">Data di Nascita</label>
-                    <input id="dataNascita" type="text" class=""
+                    <input id="dataNascita" type="date" class=""
                         placeholder="Inserisci la data di nascita del dipendente" />
                 </div>
                 <div class="inputGroup">
@@ -79,7 +79,7 @@ const giorniLavorativi = ref([])
                 </div>
                 <div class="inputGroup">
                     <label for="dataAssunzione">Data di Assunzione</label>
-                    <input id="dataAssunzione" type="text" class=""
+                    <input id="dataAssunzione" type="date" class=""
                         placeholder="Inserisci la data di assunzione del dipendente" />
                 </div>
                 <div class="inputGroup">
@@ -99,7 +99,7 @@ const giorniLavorativi = ref([])
                 </div>
                 <div class="inputGroup">
                     <label for="livello">Livello contrattuale</label>
-                    <input id="livello" type="number" class="" placeholder="Inserisci il livello contrattuale" />
+                    <input id="livello" type="text" class="" placeholder="Inserisci il livello contrattuale" />
                 </div>
                 <div class="inputGroup">
                     <label for="iban">IBAN</label>
@@ -117,7 +117,7 @@ const giorniLavorativi = ref([])
                         placeholder="Inserisci le ore settimanali del dipendente" />
                 </div>
                 <div class="inputGroup">
-                    <label for="timbrature">Timbrature</label>
+                    <label for="timbrature">Timbrature giornaliere</label>
                     <select name="timbrature" id="timbrature">
                         <option value="">Seleziona le timbrature</option>
                         <option value="2">2</option>
