@@ -87,6 +87,37 @@ export default [
           },
         ],
       },
+      {
+        path: "magazzino",
+        component: () => import("@/modules/magazzino/pages/Container.vue"),
+        children: [
+          {
+            path: "", // ✅ CORRETTO
+            name: "magazzino",
+            component: () => import("@/modules/magazzino/pages/Dashboard.vue")
+          },
+          {
+            path: "crea-magazzino", // ✅ CORRETTO
+            name: "crea-magazzino",
+            component: () => import("@/modules/magazzino/pages/CreaMagazzino.vue")
+          },
+          {
+            path: "crea-magazzino", // ✅ CORRETTO
+            name: "crea-magazzino",
+            component: () => import("@/modules/magazzino/pages/CreaMagazzino.vue")
+          },
+          {
+            path: "crea-magazzino", // ✅ CORRETTO
+            name: "crea-magazzino",
+            component: () => import("@/modules/magazzino/pages/CreaMagazzino.vue")
+          },
+          {
+            path: "Carico-merce", // ✅ CORRETTO
+            name: "carico-merce",
+            component: () => import("@/modules/magazzino/pages/CaricoMerce.vue")
+          },
+        ],
+      }
     ],
   },
 ];

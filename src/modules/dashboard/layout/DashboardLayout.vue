@@ -1,3 +1,24 @@
+<script>
+export default {
+  name: 'DashboardLayout',
+  data() {
+    return {
+      openModules: {
+        OFFICINE: false,
+        DIPENDENTI: false,
+        MAGAZZINO: false
+      }
+    }
+  },
+  methods: {
+    toggleModule(module) {
+      this.openModules[module] = !this.openModules[module]
+    }
+  }
+}
+
+</script>
+
 <template>
 
   <div class="dashboard">
@@ -10,7 +31,8 @@
         </div>
       </div>
 
-      <div class="d-flex flex-column containerAsideMenu ps-4" style="margin-top: 80px;">
+      <div class="d-flex flex-column containerAsideMenu ps-4 pb-5 pe-3"
+        style="margin-top: 80px; overflow: auto; height: calc(100vh - 150px);">
         <div class="mb-5">
           <span style="font-size: 20px;font-weight: 800; color: var(--primary-color) !important;">
             Dashboard <i class="bi bi-question-circle"></i>
@@ -25,39 +47,71 @@
         <div>
           Moduli <i class="bi bi-arrow-down-short"></i>
           <div class="d-flex flex-column mt-2 ps-2">
-            <div class="moduleList activeModule">
+
+
+            <div class="moduleList OFFICINE" :class="{ activeModule: openModules.OFFICINE }">
+              <div @click="toggleModule('OFFICINE')" style="cursor: pointer;">
+                <i class="bi pe-2" :class="openModules.OFFICINE ? 'bi-arrow-90deg-up' : 'bi-arrow-return-right'"></i>Gestionale Officine
+              </div>
               <router-link to="/officina">
-                <i class="bi bi-arrow-return-right pe-2"></i>Officina
-              </router-link> 
-              <router-link to="/officina/calendario"class="mt-1">
+                Dashboard
+              </router-link>
+              <router-link to="/officina/calendario" class="mt-1">
                 Calendario
-              </router-link>             
-              <router-link to="/officina/lavorazione"class="mt-1">
+              </router-link>
+              <router-link to="/officina/lavorazione" class="mt-1">
                 + Agg. lavorazione
-              </router-link>             
+              </router-link>
             </div>
-            <div class="moduleList activeModule">
+
+
+            <div class="moduleList DIPENDENTI" :class="{ activeModule: openModules.DIPENDENTI }">
+              <div @click="toggleModule('DIPENDENTI')" style="cursor: pointer;">
+                <i class="bi pe-2" :class="openModules.DIPENDENTI ? 'bi-arrow-90deg-up' : 'bi-arrow-return-right'"></i> Gestionale Dipendenti
+              </div>
               <router-link to="/dipendenti">
-                <i class="bi bi-arrow-return-right pe-2"></i>Dipendenti
-              </router-link> 
-              <router-link to="/dipendenti/nuovo-dipendente"class="mt-1">
-                Nuovo dipendente
-              </router-link>                 
-              <router-link to="/dipendenti/presenze"class="mt-1">
+                Dashboard
+              </router-link>
+              <router-link to="/dipendenti/nuovo-dipendente" class="mt-1">
+                + Nuovo dipendente
+              </router-link>
+              <router-link to="/dipendenti/presenze" class="mt-1">
                 Presenze
-              </router-link>                 
-              <router-link to="/dipendenti/calendario-ferie-permessi"class="mt-1">
+              </router-link>
+              <router-link to="/dipendenti/calendario-ferie-permessi" class="mt-1">
                 Calendario ferie permessi
-              </router-link>                 
-              <router-link to="/dipendenti/note-spese"class="mt-1">
+              </router-link>
+              <router-link to="/dipendenti/note-spese" class="mt-1">
                 Note spese
-              </router-link>                 
-              <router-link to="/dipendenti/timbratore"class="mt-1">
+              </router-link>
+              <router-link to="/dipendenti/timbratore" class="mt-1">
                 Timbratore
-              </router-link>                 
-              <router-link to="/dipendenti/mansioni"class="mt-1">
-                Crea mansioni
-              </router-link>                 
+              </router-link>
+              <router-link to="/dipendenti/mansioni" class="mt-1">
+                + Crea mansioni
+              </router-link>
+            </div>
+
+
+            <div class="moduleList MAGAZZINO" :class="{ activeModule: openModules.MAGAZZINO }">
+              <div @click="toggleModule('MAGAZZINO')" style="cursor: pointer;">
+                <i class="bi pe-2" :class="openModules.MAGAZZINO ? 'bi-arrow-90deg-up' : 'bi-arrow-return-right'"></i> Gestionale Magazzino
+              </div>
+              <router-link to="/magazzino">
+                Dashboard
+              </router-link>
+              <router-link to="/magazzino/crea-magazzino" class="mt-1">
+                + Crea magazzino
+              </router-link>
+              <router-link to="/dipendenti/nuovo-dipendente" class="mt-1">
+                Magazzini e merce
+              </router-link>
+              <router-link to="/dipendenti/nuovo-dipendente" class="mt-1">
+                Movimenta merce tra magazzini
+              </router-link>
+              <router-link to="/magazzino/carico-merce" class="mt-1">
+                Carico merce
+              </router-link>
             </div>
 
           </div>
@@ -102,15 +156,20 @@
 </template>
 
 <style>
-.moduleList > a:not(a:first-child) {
-  display: none ;
+.moduleList>a:not(a:first-child) {
+  display: none;
 }
 
-.moduleList.activeModule > a {
+.moduleList.activeModule>a {
   display: block !important;
 }
 
-.activeModule{
+/* .moduleList{
+  background-color: transparent;
+  transition: all 0.3s ease;
+} */
+
+.activeModule {
   background-color: #fff;
   border-radius: 10px;
   padding: 10px;
@@ -141,8 +200,10 @@
 }
 
 .sidebar {
-  width: 250px;
+  width: 300px;
   padding: 20px;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .content {
