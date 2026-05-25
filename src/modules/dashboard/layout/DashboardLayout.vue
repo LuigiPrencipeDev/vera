@@ -59,6 +59,12 @@ export default {
               <router-link to="/officina/calendario" class="mt-1">
                 Calendario
               </router-link>
+              <router-link to="/officina/clienti" class="mt-1">
+                Lista Clienti
+              </router-link>
+              <router-link to="/officina/auto-sostitutiva" class="mt-1">
+                Auto sostitutiva
+              </router-link>
               <router-link to="/officina/lavorazione" class="mt-1">
                 + Agg. lavorazione
               </router-link>
@@ -93,7 +99,7 @@ export default {
             </div>
 
 
-            <div class="moduleList MAGAZZINO" :class="{ activeModule: openModules.MAGAZZINO }">
+            <!-- <div class="moduleList MAGAZZINO" :class="{ activeModule: openModules.MAGAZZINO }">
               <div @click="toggleModule('MAGAZZINO')" style="cursor: pointer;">
                 <i class="bi pe-2" :class="openModules.MAGAZZINO ? 'bi-arrow-90deg-up' : 'bi-arrow-return-right'"></i> Gestionale Magazzino
               </div>
@@ -106,13 +112,13 @@ export default {
               <router-link to="/dipendenti/nuovo-dipendente" class="mt-1">
                 Magazzini e merce
               </router-link>
-              <router-link to="/dipendenti/nuovo-dipendente" class="mt-1">
+              <router-link to="/magazzino/movimenta-merce" class="mt-1">
                 Movimenta merce tra magazzini
               </router-link>
               <router-link to="/magazzino/carico-merce" class="mt-1">
                 Carico merce
               </router-link>
-            </div>
+            </div> -->
 
           </div>
         </div>

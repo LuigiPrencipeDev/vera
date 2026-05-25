@@ -83,7 +83,7 @@ a {
     rgb(0, 197, 241) 100%
   );
 }
-.moduleList.activeModule.OFFICINE *{
+.moduleList.activeModule.OFFICINE * {
   color: #fff !important;
 }
 
@@ -110,4 +110,24 @@ a {
 }
 .moduleList.activeModule.MAGAZZINO * {
   color: #fff !important;
+}
+
+.blurredBg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modalInner{
+  background-color: #fff;
+  padding: 35px !important;
+  border-radius: 30px;
 }

@@ -39,6 +39,23 @@ const columnDefs = ref([
     },
     { field: 'Data presa in carico', headerName: 'Data presa in carico', flex: 1 },
     { field: 'Data prevista consegna', headerName: 'Data prevista consegna', flex: 1 },
+        {
+        headerName: 'Azione',
+        flex: 1,
+        cellRenderer: () => {
+            const button = document.createElement('a')
+
+            button.innerText = 'Dettagli'
+
+            button.className = ''
+
+            button.addEventListener('click', () => {
+                alert('Dettagli preparazione')
+            })
+
+            return button
+        }
+    }
 
 ])
 

@@ -18,6 +18,23 @@ const columnDefs = ref([
     { field: 'ruolo', headerName: 'Ruolo', flex: 1 },
     { field: 'RAL', headerName: 'RAL', flex: 1 },
     { field: 'data-assunzione', headerName: 'Data assunzione', flex: 1 },
+    {
+        headerName: 'Azione',
+        flex: 1,
+        cellRenderer: () => {
+            const button = document.createElement('a')
+
+            button.innerText = 'Dettagli'
+
+            button.className = ''
+
+            button.addEventListener('click', () => {
+                alert('Dettagli dipendente')
+            })
+
+            return button
+        }
+    }
 ])
 
 const rowData = ref([

@@ -44,6 +44,18 @@ export default [
             component: () =>
               import("@/modules/officine/pages/OfficinaLavorazione.vue"),
           },
+          {
+            path: "clienti", // ✅ CORRETTO
+            name: "officina-clienti",
+            component: () =>
+              import("@/modules/officine/pages/OfficinaListaClienti.vue"),
+          },
+          {
+            path: "auto-sostitutiva", // ✅ CORRETTO
+            name: "officina-auto-sostitutiva",
+            component: () =>
+              import("@/modules/officine/pages/OfficinaAutoSostitutiva.vue"),
+          },
         ],
       },
       {
@@ -107,9 +119,9 @@ export default [
             component: () => import("@/modules/magazzino/pages/CreaMagazzino.vue")
           },
           {
-            path: "crea-magazzino", // ✅ CORRETTO
-            name: "crea-magazzino",
-            component: () => import("@/modules/magazzino/pages/CreaMagazzino.vue")
+            path: "movimenta-merce", // ✅ CORRETTO
+            name: "movimenta-merce",
+            component: () => import("@/modules/magazzino/pages/MovimentaMerce.vue")
           },
           {
             path: "Carico-merce", // ✅ CORRETTO

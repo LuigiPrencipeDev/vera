@@ -10,7 +10,7 @@ const fatturato = [12000, 18000, 15000, 22000, 37450, 84500]
   <div class="containerBoxStatsDashboard">
     <div class="d-flex align-items-center justify-content-between">
       <div>
-        <div><b>Vendite YTD</b> <i class="bi bi-question-circle"></i></div>
+        <div><b>Incassi YTD</b> <i class="bi bi-question-circle"></i></div>
         <div class="fatturatoYTD">
           <div class="numberStyleGeneral">
             &euro;84.500<span>,82</span>
@@ -27,9 +27,9 @@ const fatturato = [12000, 18000, 15000, 22000, 37450, 84500]
       <div class="d-flex align-items-stratch gap-3">
 
         <div class="boxMainData">
-          <b>Costo materiali</b> <i class="bi bi-question-circle"></i>
+          <b>Valore Merce</b> <i class="bi bi-question-circle"></i>
           <div class="numberStyleGeneral">
-            €46.475<span>,82</span>
+            €186.475<span>,82</span>
           </div>
           <div class="d-flex align-items-center justify-content-end">
             <div class="buttonArrow">
@@ -51,7 +51,7 @@ const fatturato = [12000, 18000, 15000, 22000, 37450, 84500]
         </div>
 
         <div class="boxMainData">
-          <b>Costo personale</b> <i class="bi bi-question-circle"></i>
+          <b>Costo dipendenti</b> <i class="bi bi-question-circle"></i>
           <div class="numberStyleGeneral">
             €71.220<span>,82</span>
           </div>
@@ -64,7 +64,7 @@ const fatturato = [12000, 18000, 15000, 22000, 37450, 84500]
       </div>
     </div>
 
-    <div class="spacerTop">
+    <div class="spacerTop d-none">
       <div><b>Servizi/prodotti più venduti YTD</b> <i class="bi bi-question-circle"></i></div>
 
       <div class="threeDataBar mt-2">
@@ -91,11 +91,15 @@ const fatturato = [12000, 18000, 15000, 22000, 37450, 84500]
     </div>
 
     <div class="containerGraficoFatturato spacerTop">
-      <div><b>Grafico Vendite</b> <i class="bi bi-question-circle"></i></div>
+      <div><b>Grafico Incassi</b> <i class="bi bi-question-circle"></i></div>
 
       <div class="chartFatturatoContainer">
         <BarChart :labels="anni" :data="fatturato" label="Fatturato (€)" />
       </div>
+    </div>
+
+    <div class="addModuleWidget">
+      + Aggiungi Widget
     </div>
 
 
@@ -104,6 +108,17 @@ const fatturato = [12000, 18000, 15000, 22000, 37450, 84500]
 </template>
 
 <style>
+.addModuleWidget{
+  margin-top: 40px;
+  text-align:center;
+  padding: 40px;
+  border: 1px dashed #d1d1d1;
+  border-radius: 30px;
+  color: #b5b5b5;
+  font-weight: 600;
+  cursor: pointer;
+}
+
 .chartFatturatoContainer{
   height: 450px;
 }
@@ -174,7 +189,7 @@ const fatturato = [12000, 18000, 15000, 22000, 37450, 84500]
 
 .boxMainData {
   background-color: #f6f6f6;
-  min-width: 220px;
+  min-width: 230px;
   padding: 15px;
   border-radius: 20px;
 }
