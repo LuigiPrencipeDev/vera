@@ -1,8 +1,9 @@
 <script setup>
 import BarChart from '@/components/BarChart.vue';
+import MapComponents from '@/components/MapComponents.vue';
 
 const anni = ['2021', '2022', '2023', '2024', '2025', '2026']
-const fatturato = [12000, 18000, 15000, 22000, 37450, 84500]
+const fatturato = [19000, 28000,55000, 42000, 57450, 84500]
 </script>
 
 <template>
@@ -11,6 +12,9 @@ const fatturato = [12000, 18000, 15000, 22000, 37450, 84500]
     <div class="d-flex align-items-center justify-content-between">
       <div>
         <div><b>Incassi YTD</b> <i class="bi bi-question-circle"></i></div>
+        <!-- <div class="compareFattuatoYTD" style="text-decoration: underline; cursor: pointer;">
+          Registra incassi esterni <i class="bi bi-database-fill-add"></i>
+        </div> -->
         <div class="fatturatoYTD">
           <div class="numberStyleGeneral">
             &euro;84.500<span>,82</span>
@@ -22,9 +26,20 @@ const fatturato = [12000, 18000, 15000, 22000, 37450, 84500]
         <div class="compareFattuatoYTD">
           vs prev. €81.094,19 (1 gennaio 2024 al 27/08/2024)
         </div>
+
+        <div class="d-flex gap-2 mt-3">
+          <button class="greenButton mt-3">
+            Registra incassi esterni <i class="bi bi-database-fill-add"></i>
+          </button>
+          <button class="greenButton mt-3">
+            Dettagli
+          </button>
+        </div>
       </div>
 
-      <div class="d-flex align-items-stratch gap-3">
+      <MapComponents />
+
+      <!-- <div class="d-flex align-items-stratch gap-3">
 
         <div class="boxMainData">
           <b>Valore Merce</b> <i class="bi bi-question-circle"></i>
@@ -61,7 +76,7 @@ const fatturato = [12000, 18000, 15000, 22000, 37450, 84500]
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
 
     <div class="spacerTop d-none">
@@ -108,9 +123,11 @@ const fatturato = [12000, 18000, 15000, 22000, 37450, 84500]
 </template>
 
 <style>
-.addModuleWidget{
+
+
+.addModuleWidget {
   margin-top: 40px;
-  text-align:center;
+  text-align: center;
   padding: 40px;
   border: 1px dashed #d1d1d1;
   border-radius: 30px;
@@ -119,7 +136,7 @@ const fatturato = [12000, 18000, 15000, 22000, 37450, 84500]
   cursor: pointer;
 }
 
-.chartFatturatoContainer{
+.chartFatturatoContainer {
   height: 450px;
 }
 
@@ -180,8 +197,8 @@ const fatturato = [12000, 18000, 15000, 22000, 37450, 84500]
 }
 
 .fatturatoYTD {
-  font-size: 50px;
-  font-weight: 600;
+  font-size: 75px;
+  font-weight: 700;
   display: flex;
   align-items: center;
   gap: 20px;
