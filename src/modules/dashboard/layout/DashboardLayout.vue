@@ -78,9 +78,6 @@ export default {
               <router-link to="/dipendenti">
                 Dashboard
               </router-link>
-              <router-link to="/dipendenti/nuovo-dipendente" class="mt-1">
-                + Nuovo dipendente
-              </router-link>
               <router-link to="/dipendenti/presenze" class="mt-1">
                 Presenze
               </router-link>
@@ -92,6 +89,9 @@ export default {
               </router-link>
               <router-link to="/dipendenti/timbratore" class="mt-1">
                 Timbratore
+              </router-link>
+              <router-link to="/dipendenti/nuovo-dipendente" class="mt-1">
+                + Nuovo dipendente
               </router-link>
               <router-link to="/dipendenti/mansioni" class="mt-1">
                 + Crea mansioni
