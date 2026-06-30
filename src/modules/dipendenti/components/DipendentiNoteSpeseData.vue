@@ -5,7 +5,7 @@
 <template>
 
     <div class="mt-5 d-flex align-items-center justify-content-center gap-4 flex-wrap">
-        <div class="officineBoxData">
+        <div class="officineBoxData gradient-verde" style="color: #fff;">
             <div>
                 <b>Da rimborsare questo mese</b>
             </div>
@@ -13,13 +13,13 @@
                871,50 &euro;
             </div>
             <div>
-                <button class="greenButton">
+                <button class="glassButton">
                     Visualizza
                 </button>
             </div>
         </div>
 
-        <div class="officineBoxData">
+        <div class="officineBoxData gradient-blu" style="color: #fff;">
             <div>
                 <b>Spese in Attesa</b>
             </div>
@@ -27,13 +27,13 @@
                 2
             </div>
             <div>
-                <button class="greenButton">
+                <button class="glassButton">
                     Visualizza
                 </button>
             </div>
         </div>
 
-        <div class="officineBoxData">
+        <div class="officineBoxData gradient-viola" style="color: #fff;">
             <div>
                 <b>Media per Nota Spese</b>
             </div>
@@ -41,13 +41,13 @@
                 145,25 &euro;
             </div>
             <div>
-                <button class="greenButton">
+                <button class="glassButton">
                     Visualizza
                 </button>
             </div>
         </div>
 
-        <div class="officineBoxData"  style="background-color: #FFC302;">
+        <div class="officineBoxData gradient-rosso"  style="color: #fff;">
             <div>
                 <b>Categoria più costosa</b>
             </div>
@@ -55,7 +55,7 @@
                 Viaggo
             </div>
             <div>
-                <button class="greenButton">
+                <button class="glassButton">
                     Visualizza
                 </button>
             </div>

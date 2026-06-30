@@ -81,7 +81,7 @@
                             <input id="nome" type="text" class="" placeholder="Es. Sostituzione pastiglie freni" />
 
                         </div>
-                        <button class="addTaskVehicle">
+                        <button class="addTaskVehicle generalButton">
                             Aggiungi
                         </button>
                     </div>
@@ -119,7 +119,7 @@
                         <button class="greenButton">
                             Stampa preventivo
                         </button>
-                        <button class="generalButton">
+                        <button class="generalButton ">
                             Salva preventivo
                         </button>
                     </div>
