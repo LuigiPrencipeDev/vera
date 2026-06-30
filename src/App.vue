@@ -48,9 +48,9 @@
 }
 
 .officineBoxData {
-  width: 220px;
+  width: 250px;
   height: 140px;
-  border-radius: 20px;
+  border-radius: 30px;
   border: 1px solid #d1d1d1;
   padding: 15px;
   text-align: center;

@@ -100,6 +100,17 @@ export default [
         ],
       },
       {
+        path: "albergo",
+        component: () => import("@/modules/alberghiera/pages/AlbergoContainer.vue"),
+        children: [
+          {
+            path: "", // ✅ CORRETTO
+            name: "gestione-alberghiera",
+            component: () => import("@/modules/alberghiera/pages/AlbergoHome.vue")
+          },
+        ],
+      },
+      {
         path: "magazzino",
         component: () => import("@/modules/magazzino/pages/Container.vue"),
         children: [

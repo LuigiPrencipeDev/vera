@@ -6,7 +6,8 @@ export default {
       openModules: {
         OFFICINE: false,
         DIPENDENTI: false,
-        MAGAZZINO: false
+        MAGAZZINO: false,
+        ALBERGO: false
       }
     }
   },
@@ -74,6 +75,33 @@ export default {
             <div class="moduleList DIPENDENTI" :class="{ activeModule: openModules.DIPENDENTI }">
               <div @click="toggleModule('DIPENDENTI')" style="cursor: pointer;">
                 <i class="bi pe-2" :class="openModules.DIPENDENTI ? 'bi-arrow-90deg-up' : 'bi-arrow-return-right'"></i> Gestionale Dipendenti
+              </div>
+              <router-link to="/dipendenti">
+                Dashboard
+              </router-link>
+              <router-link to="/dipendenti/presenze" class="mt-1">
+                Presenze
+              </router-link>
+              <router-link to="/dipendenti/calendario-ferie-permessi" class="mt-1">
+                Calendario ferie permessi
+              </router-link>
+              <router-link to="/dipendenti/note-spese" class="mt-1">
+                Note spese
+              </router-link>
+              <router-link to="/dipendenti/timbratore" class="mt-1">
+                Timbratore
+              </router-link>
+              <router-link to="/dipendenti/nuovo-dipendente" class="mt-1">
+                + Nuovo dipendente
+              </router-link>
+              <router-link to="/dipendenti/mansioni" class="mt-1">
+                + Crea mansioni
+              </router-link>
+            </div>
+
+            <div class="moduleList ALBERGO" :class="{ activeModule: openModules.ALBERGO }">
+              <div @click="toggleModule('ALBERGO')" style="cursor: pointer;">
+                <i class="bi pe-2" :class="openModules.ALBERGO ? 'bi-arrow-90deg-up' : 'bi-arrow-return-right'"></i> Gestione Alberghiera
               </div>
               <router-link to="/dipendenti">
                 Dashboard
