@@ -106,24 +106,13 @@ export default {
               <router-link to="/albergo">
                 Dashboard
               </router-link>
-              <router-link to="/albergo/presenze" class="mt-1">
-                Presenze
+              <router-link to="/albergo/calendario" class="mt-1">
+                Calendario
               </router-link>
-              <router-link to="/dipendenti/calendario-ferie-permessi" class="mt-1">
-                Calendario ferie permessi
+              <router-link to="/albergo/nuova-prenotazione" class="mt-1">
+                Nuova Prenotazione
               </router-link>
-              <router-link to="/dipendenti/note-spese" class="mt-1">
-                Note spese
-              </router-link>
-              <router-link to="/dipendenti/timbratore" class="mt-1">
-                Timbratore
-              </router-link>
-              <router-link to="/dipendenti/nuovo-dipendente" class="mt-1">
-                + Nuovo dipendente
-              </router-link>
-              <router-link to="/dipendenti/mansioni" class="mt-1">
-                + Crea mansioni
-              </router-link>
+              
             </div>
 
 

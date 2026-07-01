@@ -108,6 +108,16 @@ export default [
             name: "gestione-alberghiera",
             component: () => import("@/modules/alberghiera/pages/AlbergoHome.vue")
           },
+          {
+            path: "calendario", // ✅ CORRETTO
+            name: "albergo-calendario",
+              component: () => import("@/modules/alberghiera/pages/AlbergoCalendario.vue")
+          },
+          {
+            path: "nuova-prenotazione", // ✅ CORRETTO
+            name: "albergo-nuova-prenotazione",
+            component: () => import("@/modules/alberghiera/pages/AlbergoNuovaPrenotazione.vue")
+          }
         ],
       },
       {

@@ -2,13 +2,15 @@
 import AlbergoData from "../components/AlbergoDashboardData.vue";
 import AlbergoDataPerformance from "../components/AlbergoDashboardDataPerformance.vue";
 import AlbergoUtilizzoCamere from "../components/AlbergoUtilizzoCamere.vue";
+import AlbergoPrenotazioniGrafico from "../components/AlbergoPrenotazioniGrafico.vue";
 export default {
     name: "AlbergoHome",
 
     components: {
         AlbergoData,
         AlbergoDataPerformance,
-        AlbergoUtilizzoCamere
+        AlbergoUtilizzoCamere,
+        AlbergoPrenotazioniGrafico
     }
 }
 
@@ -36,20 +38,20 @@ export default {
             <AlbergoUtilizzoCamere />
         </div>
 
-        <div>
-            <b>Utilizzo Camere</b>
+        <div class="mt-5">
+            <b>Performance Economica (Occupazione & Revenue)</b>
             <div class="miniText">
                 Visualizza l'utilizzo delle camere.
             </div>
             <AlbergoDataPerformance />
         </div>
-
+        
         <div class="mt-5">
-            <b>Utilizzo Camere</b>
+            <b>Prenotazioni</b>
             <div class="miniText">
-                Visualizza l'utilizzo delle camere.
+                Visualizza le prenotazioni.
             </div>
-            <AlbergoUtilizzoCamere />
+            <AlbergoPrenotazioniGrafico />
         </div>
 
     </div>

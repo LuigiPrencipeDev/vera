@@ -17,11 +17,6 @@
         </select>
         
         <select class="" style="width: 200px;">
-          <option value="">Mese</option>
-          <option value="6">Giugno</option>
-        </select>
-        
-        <select class="" style="width: 200px;">
           <option value="">Sede / Struttura</option>
         </select>
       </div>
@@ -50,49 +45,35 @@ import {
 ChartJS.register(Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale)
 
 export default {
-  name: 'AlbergoDashboardData',
-  components: {
-    Bar
-  },
+  name: 'AlbergoDashboardAnnuale',
+  components: { Bar },
   data() {
     return {
       chartData: {
-        // Date di esempio (Giugno 2026)
         labels: [
-          '01/06/2026', '02/06/2026', '03/06/2026', '04/06/2026', '05/06/2026',
-          '06/06/2026', '07/06/2026', '08/06/2026', '09/06/2026', '10/06/2026',
-          '11/06/2026', '12/06/2026', '13/06/2026', '14/06/2026', '15/06/2026',
-          '16/06/2026', '17/06/2026', '18/06/2026', '19/06/2026', '20/06/2026',
-          '21/06/2026', '22/06/2026', '23/06/2026', '24/06/2026', '25/06/2026',
-          '26/06/2026', '27/06/2026', '28/06/2026', '29/06/2026', '30/06/2026'
+          'Gen', 'Feb', 'Mar', 'Apr', 'Mag', 'Giu',
+          'Lug', 'Ago', 'Set', 'Ott', 'Nov', 'Dic'
         ],
         datasets: [
           {
-            label: 'Camere Occupate',
-            backgroundColor: '#2E7D32',
-            data: [
-              4500, 4200, 4000, 4600, 5000, 5500, 5200, 4800, 4700, 4900,
-              5100, 5300, 5600, 5800, 5400, 5000, 4900, 5100, 5300, 5800,
-              6000, 6100, 5700, 5400, 5500, 5800, 6200, 6300, 5900, 5200
-            ]
+            label: 'Sito Web',
+            backgroundColor: '#2E7D32', // Verde
+            data: [1200, 1100, 1500, 1800, 2200, 2800, 3500, 3800, 2500, 1900, 1300, 1500]
           },
           {
-            label: 'Non occupate (Pronte)',
+            label: 'Booking',
             backgroundColor: '#1565C0', // Blu
-            data: [
-              2000, 2300, 2500, 2100, 1800, 1500, 1700, 2000, 2100, 1900,
-              1800, 1700, 1400, 1200, 1500, 2000, 2200, 2000, 1800, 1400,
-              1200, 1100, 1500, 1800, 1700, 1500, 1100, 1000, 1300, 1800
-            ]
+            data: [2000, 1800, 2500, 3000, 3500, 4500, 5500, 5800, 4000, 3200, 2200, 2500]
           },
           {
-            label: 'Non occupate (Da pulire / Housekeeping)',
-            backgroundColor: '#9E9E9E', // Grigio
-            data: [
-              1500, 1500, 1500, 1300, 1200, 1000, 1100, 1200, 1200, 1200,
-              1100, 1000, 1000, 1000, 1100, 1000, 900, 900, 900, 800,
-              800, 800, 800, 800, 800, 700, 700, 700, 800, 1000
-            ]
+            label: 'Airbnb',
+            backgroundColor: '#E91E63', // Rosa
+            data: [800, 900, 1200, 1500, 1800, 2500, 3200, 3500, 2000, 1500, 1000, 1200]
+          },
+          {
+            label: 'Telefono/Email',
+            backgroundColor: '#FF9800', // Arancione
+            data: [500, 600, 700, 800, 900, 1200, 1500, 1600, 1000, 900, 700, 800]
           }
         ]
       },
@@ -100,39 +81,14 @@ export default {
         responsive: true,
         maintainAspectRatio: false,
         plugins: {
-          legend: {
-            position: 'bottom',
-            labels: {
-              boxWidth: 15,
-              padding: 20,
-              font: {
-                size: 13
-              }
-            }
-          },
-          tooltip: {
-            mode: 'index',
-            intersect: false
-          }
+          legend: { position: 'bottom' },
+          tooltip: { mode: 'index', intersect: false }
         },
         scales: {
-          x: {
-            stacked: true, // Impila i 3 dataset uno sopra l'altro
-            grid: {
-              display: false
-            },
-            ticks: {
-              maxRotation: 45,
-              minRotation: 45
-            }
-          },
-          y: {
-            stacked: true, // Mantiene l'effetto "somma" verticale delle barre
-            min: 0,
-            max: 9000,
-            ticks: {
-              stepSize: 1000
-            }
+          x: { stacked: true },
+          y: { 
+            stacked: true,
+            ticks: { stepSize: 2000 } 
           }
         }
       }

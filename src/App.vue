@@ -86,11 +86,11 @@
   font-size: 14px;
   font-weight: 600;
 
-    box-shadow: 
+  box-shadow:
     /* Ombra esterna più ampia e scura per sollevare il box */
-    12px 12px 24px rgba(0, 0, 0, 0.2), 
+    12px 12px 24px rgba(0, 0, 0, 0.2),
     /* Riflesso interno superiore più brillante */
-    inset 3px 3px 6px rgba(255, 255, 255, 0.6), 
+    inset 3px 3px 6px rgba(255, 255, 255, 0.6),
     /* Ombra interna inferiore più marcata per il 3D */
     inset -3px -3px 6px rgba(0, 0, 0, 0.2);
 }
@@ -98,21 +98,25 @@
 .glassButton {
   /* Sfondo con gradiente semi-trasparente */
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.05));
-  
+
   /* Effetto vetro */
   backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px); /* Supporto Safari */
-  
+  -webkit-backdrop-filter: blur(10px);
+  /* Supporto Safari */
+
   /* Bordo sottile e luminoso */
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 20px;
-  
+
   /* Ombre per profondità 3D */
-  box-shadow: 
-    8px 8px 16px rgba(0, 0, 0, 0.1), /* Ombra esterna per sollevare */
-    inset 2px 2px 4px rgba(255, 255, 255, 0.4), /* Riflesso interno (effetto vetro) */
-    inset -2px -2px 4px rgba(0, 0, 0, 0.1); /* Ombra interna per volume */
-  
+  box-shadow:
+    8px 8px 16px rgba(0, 0, 0, 0.1),
+    /* Ombra esterna per sollevare */
+    inset 2px 2px 4px rgba(255, 255, 255, 0.4),
+    /* Riflesso interno (effetto vetro) */
+    inset -2px -2px 4px rgba(0, 0, 0, 0.1);
+  /* Ombra interna per volume */
+
   /* Stile testo */
   padding: 5px 30px;
   color: white;
@@ -124,7 +128,7 @@
 /* Effetto al passaggio del mouse */
 .glassButton:hover {
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1));
-  box-shadow: 
+  box-shadow:
     10px 10px 20px rgba(0, 0, 0, 0.15),
     inset 2px 2px 6px rgba(255, 255, 255, 0.5);
 }
@@ -139,18 +143,18 @@
   flex-direction: column;
   justify-content: space-between;
   /* Box Shadow Potenziato */
-  box-shadow: 
+  box-shadow:
     /* Ombra esterna più ampia e scura per sollevare il box */
-    12px 12px 24px rgba(0, 0, 0, 0.2), 
+    12px 12px 24px rgba(0, 0, 0, 0.2),
     /* Riflesso interno superiore più brillante */
-    inset 3px 3px 6px rgba(255, 255, 255, 0.6), 
+    inset 3px 3px 6px rgba(255, 255, 255, 0.6),
     /* Ombra interna inferiore più marcata per il 3D */
     inset -3px -3px 6px rgba(0, 0, 0, 0.2);
 }
 
 .officineBoxData .numberData {
-  font-size: 30px;
-  font-weight: 600;
+  font-size: 35px;
+  font-weight: 900;
 }
 
 .officineBoxData b {
