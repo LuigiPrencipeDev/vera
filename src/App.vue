@@ -131,8 +131,8 @@
 
 .officineBoxData {
   width: 250px;
-  height: 150px;
-  border-radius: 30px;
+  height: 160px;
+  border-radius: 40px;
   padding: 15px;
   text-align: center;
   display: flex;

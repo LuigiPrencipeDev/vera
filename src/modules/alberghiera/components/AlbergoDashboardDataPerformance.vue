@@ -5,57 +5,57 @@
 <template>
 
     <div class="mt-5 d-flex align-items-center justify-content-center gap-4 flex-wrap">
-        <div class="officineBoxData" style="background-color: var(--primary-color); color: #fff;">
+        <div class="officineBoxData gradient-verde" style="color: #fff;">
             <div>
-                <b>Totale Dipendenti</b>
+                <b>% Occupazione odierna</b>
             </div>
             <div class="numberData">
-               22
+                91%
             </div>
             <div>
-                <button class="genericButton">
+                <button class="glassButton">
                     Visualizza
                 </button>
             </div>
         </div>
 
-        <div class="officineBoxData">
+        <div class="officineBoxData gradient-rosso" style="color: #fff;">
             <div>
-                <b>Costo dipendenti annuo</b>
+                <b>ADR</b><!--  (Average Daily Rate) -->
             </div>
             <div class="numberData">
-                71.220 &euro;
+                110€
             </div>
             <div>
-                <button class="greenButton">
+                <button class="glassButton">
+                    Visualizza
+                </button> 
+            </div>
+        </div>
+        
+        <div class="officineBoxData gradient-viola" style="color: #fff;">
+            <div>
+                <b>RevPAR</b><!--  (Revenue Per Available Room) -->
+            </div>
+            <div class="numberData">
+                182€
+            </div>
+            <div>
+                <button class="glassButton">
                     Visualizza
                 </button>
             </div>
         </div>
 
-        <div class="officineBoxData" style="background-color: #FFC302;">
+        <div class="officineBoxData gradient-blu" style="color: #fff;">
             <div>
-                <b>Nuove richieste</b>
+                <b>Camere libere/disponibili</b>
             </div>
             <div class="numberData">
-                3
+                321
             </div>
             <div>
-                <button class="greenButton">
-                    Visualizza
-                </button>
-            </div>
-        </div>
-
-        <div class="officineBoxData" style="background-color: #D0342C; color: #fff;">
-            <div>
-                <b>Anomalie timbratura</b>
-            </div>
-            <div class="numberData">
-                5
-            </div>
-            <div>
-                <button class="greenButton">
+                <button class="glassButton">
                     Visualizza
                 </button>
             </div>

@@ -103,10 +103,10 @@ export default {
               <div @click="toggleModule('ALBERGO')" style="cursor: pointer;">
                 <i class="bi pe-2" :class="openModules.ALBERGO ? 'bi-arrow-90deg-up' : 'bi-arrow-return-right'"></i> Gestione Alberghiera
               </div>
-              <router-link to="/dipendenti">
+              <router-link to="/albergo">
                 Dashboard
               </router-link>
-              <router-link to="/dipendenti/presenze" class="mt-1">
+              <router-link to="/albergo/presenze" class="mt-1">
                 Presenze
               </router-link>
               <router-link to="/dipendenti/calendario-ferie-permessi" class="mt-1">

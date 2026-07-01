@@ -1,12 +1,14 @@
 <script>
-import DipendentiData from "../components/DipendentiDashboardData.vue";
-import DipendentiTable from "../components/DipendentiListTable.vue";
+import AlbergoData from "../components/AlbergoDashboardData.vue";
+import AlbergoDataPerformance from "../components/AlbergoDashboardDataPerformance.vue";
+import AlbergoUtilizzoCamere from "../components/AlbergoUtilizzoCamere.vue";
 export default {
-    name: "DipendentiHome",
+    name: "AlbergoHome",
 
     components: {
-        DipendentiData,
-        DipendentiTable
+        AlbergoData,
+        AlbergoDataPerformance,
+        AlbergoUtilizzoCamere
     }
 }
 
@@ -16,18 +18,38 @@ export default {
 
     <div class="w-100">
         <div>
-            <b>Dipendenti</b>
+            <b>Situazione Operativa (Stato Camere)</b>
             <div class="miniText">
-                Gestisci i dati dei tuoi dipendenti.
+                Gestisci i dati delle tue camere.
             </div>
         </div>
 
         <div>
-            <DipendentiData />
+            <AlbergoData />
+        </div>
+
+        <div class="mt-5">
+            <b>Utilizzo Camere</b>
+            <div class="miniText">
+                Visualizza l'utilizzo delle camere.
+            </div>
+            <AlbergoUtilizzoCamere />
         </div>
 
         <div>
-            <DipendentiTable />
+            <b>Utilizzo Camere</b>
+            <div class="miniText">
+                Visualizza l'utilizzo delle camere.
+            </div>
+            <AlbergoDataPerformance />
+        </div>
+
+        <div class="mt-5">
+            <b>Utilizzo Camere</b>
+            <div class="miniText">
+                Visualizza l'utilizzo delle camere.
+            </div>
+            <AlbergoUtilizzoCamere />
         </div>
 
     </div>

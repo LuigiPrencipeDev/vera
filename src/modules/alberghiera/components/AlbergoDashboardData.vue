@@ -5,57 +5,57 @@
 <template>
 
     <div class="mt-5 d-flex align-items-center justify-content-center gap-4 flex-wrap">
-        <div class="officineBoxData">
+        <div class="officineBoxData gradient-verde" style="color: #fff;">
             <div>
-                <b>Da rimborsare questo mese</b>
+                <b>Check-IN oggi</b>
             </div>
             <div class="numberData">
-               871,50 &euro;
+                15
             </div>
             <div>
-                <button class="greenButton">
+                <button class="glassButton">
                     Visualizza
                 </button>
             </div>
         </div>
 
-        <div class="officineBoxData">
+        <div class="officineBoxData gradient-rosso" style="color: #fff;">
             <div>
-                <b>Spese in Attesa</b>
+                <b>Check-OUT oggi</b>
             </div>
             <div class="numberData">
-                2
+                6
             </div>
             <div>
-                <button class="greenButton">
+                <button class="glassButton">
+                    Visualizza
+                </button>
+            </div>
+        </div>
+        
+        <div class="officineBoxData gradient-viola" style="color: #fff;">
+            <div>
+                <b>Camere occupate</b>
+            </div>
+            <div class="numberData">
+                182
+            </div>
+            <div>
+                <button class="glassButton">
                     Visualizza
                 </button>
             </div>
         </div>
 
-        <div class="officineBoxData">
+        <div class="officineBoxData gradient-blu" style="color: #fff;">
             <div>
-                <b>Media per Nota Spese</b>
+                <b>Camere libere/disponibili</b>
             </div>
             <div class="numberData">
-                145,25 &euro;
+                321
             </div>
             <div>
-                <button class="greenButton">
-                    Visualizza
-                </button>
-            </div>
-        </div>
-
-        <div class="officineBoxData"  style="background-color: #FFC302;">
-            <div>
-                <b>Categoria più costosa</b>
-            </div>
-            <div class="numberData">
-                Viaggo
-            </div>
-            <div>
-                <button class="greenButton">
+                <button class="glassButton">
                     Visualizza
                 </button>
             </div>
