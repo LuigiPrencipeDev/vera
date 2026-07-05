@@ -123,3 +123,20 @@ a {
   padding: 35px !important;
   border-radius: 30px;
 }
+
+.shadowGlass{
+  box-shadow: 12px 12px 24px rgba(0, 0, 0, 0.2), inset 3px 3px 6px rgba(255, 255, 255, 0.6), inset -3px -3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.boxSmallAction{
+  font-size: 12px;
+  font-weight: 600;
+  padding: 5px 10px;
+  background-color: #f6f6f6;
+  border-radius: 10px;
+  border: 0;
+}
+
+.boxSmallAction:hover{
+  background-color: #e3e3e3;
+}

@@ -27,8 +27,13 @@ export default {
     <aside class="sidebar">
       <div class="d-flex align-items-center gap-3" style="padding-top: 20px;">
         <img src="/images/veraLogoPng.png" width="30px" alt="">
-        <div>
-          <b>Nome azienda</b>
+        <div class="d-flex flex-column">
+          <div>
+            <b>Vera </b>            
+          </div>
+          <div style="font-size: 11px;">
+            Un prodotto a cura di <a href="https://prensys.it/">Prensys</a>
+          </div>
         </div>
       </div>
 

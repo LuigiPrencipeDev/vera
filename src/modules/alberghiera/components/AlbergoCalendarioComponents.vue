@@ -1,12 +1,12 @@
 <template>
   <div class="calendar-container">
     <!-- Header: Navigazione e Filtri -->
-    <div class="calendar-header">
-      <button @click="prevMonth" class="nav-btn"><i class="bi bi-arrow-left-short"></i></button>
-      <div style="font-size: 20px; text-transform: capitalize; width: 200px; text-align: center;">
+    <div class="calendar-header mt-5">
+      
+      <div style="font-size: 20px; text-transform: capitalize; width: 200px; text-align: start; font-weight: 600; font-style: italic;">
         {{ currentMonthName }} {{ currentYear }}
       </div>
-
+      <button @click="prevMonth" class="nav-btn"><i class="bi bi-arrow-left-short"></i></button>
       <button @click="nextMonth" class="nav-btn"><i class="bi bi-arrow-right-short"></i></button>
     </div>
 
@@ -48,7 +48,7 @@ export default {
           type: 'Appartamento',
           bookings: [
             { date: '12/07/2026', status: 'confirmed', source: 'direct' },
-            { date: '13/07/2026', status: 'pending', source: 'direct' }
+            { date: '13/07/2026', status: 'blocked', source: 'direct' }
           ]
         },
         {
@@ -57,7 +57,7 @@ export default {
           type: 'Appartamento',
           bookings: [
             { date: '12/07/2026', status: 'confirmed', source: 'booking' },
-            { date: '13/07/2026', status: 'pending', source: 'direct' }
+            { date: '13/07/2026', status: 'blocked', source: 'direct' }
           ]
         },
         {
@@ -66,7 +66,7 @@ export default {
           type: 'Appartamento',
           bookings: [
             { date: '12/07/2026', status: 'confirmed', source: 'direct' },
-            { date: '13/07/2026', status: 'pending', source: 'direct' }
+            { date: '13/07/2026', status: 'blocked', source: 'direct' }
           ]
         },
         {
@@ -75,7 +75,7 @@ export default {
           type: 'Appartamento',
           bookings: [
             { date: '12/07/2026', status: 'confirmed', source: 'airbnb' },
-            { date: '13/07/2026', status: 'pending', source: 'direct' }
+            { date: '13/07/2026', status: 'blocked', source: 'direct' }
           ]
         },
         {
@@ -84,7 +84,7 @@ export default {
           type: 'Appartamento',
           bookings: [
             { date: '12/07/2026', status: 'confirmed', source: 'direct' },
-            { date: '13/07/2026', status: 'pending', source: 'direct' }
+            { date: '13/07/2026', status: 'blocked', source: 'direct' }
           ]
         }
       ]
@@ -119,7 +119,7 @@ export default {
 
     getBookingClass(booking) {
       if (!booking) return 'free';
-      if (booking.status === 'pending') return 'status-pending';
+      if (booking.status === 'blocked') return 'status-blocked';
       return `status-confirmed-${booking.source}`;
     }
 
@@ -131,7 +131,7 @@ export default {
 .calendar-header {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
   gap: 20px;
   margin-bottom: 20px;
   margin-top: 20px;
@@ -161,7 +161,7 @@ export default {
 }
 
 /* Stato in attesa: Grigio, bordo tratteggiato */
-.status-pending {
+.status-blocked {
   background-color: #e0e0e0 !important;
   border: 2px dashed #9e9e9e !important;
 }
@@ -192,7 +192,7 @@ export default {
   cursor: pointer;
   padding: 5px 15px;
   border: none;
-  background: #2fd89d41;
+  background: #f6f6f6;
   border-radius: 100px;
 }
 </style>
