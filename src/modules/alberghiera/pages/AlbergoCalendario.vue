@@ -51,10 +51,16 @@ export default {
             </div>
 
             <div class="d-flex align-items-center gap-2">
-                <button class="boxSmallAction" @click="openModal('BookingForm', 'Nuovo Preventivo', 'Compila i dettagli per la nuova prenotazione')">+
-                    Preventivo</button>
-                <button class="boxSmallAction">Blocca camere</button>
-                <button class="boxSmallAction">Attesa di conferma</button>
+                <button class="boxSmallAction gradient-viola text-white"
+                    @click="openModal('BookingForm', 'Descrivi la prenotazione', 'Descrivi i dettagli della prenotazione e lascia che l\'IA crei la configurazione ottimale')">
+                    Ai <i class="bi bi-stars"></i>
+                </button>
+                <button class="boxSmallAction gradient-blu text-white"
+                    @click="openModal('BookingForm', 'Nuovo Preventivo', 'Compila i dettagli per la nuova prenotazione')">+
+                    Preventivo
+                </button>
+                <button class="boxSmallAction gradient-rosso text-white">Blocca camere</button>
+                <button class="boxSmallAction gradient-arancione text-white">Attesa di conferma</button>
             </div>
 
         </div>

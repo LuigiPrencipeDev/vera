@@ -395,12 +395,12 @@ export default {
 
 /* Arrotondiamo solo i bordi esterni del blocco prenotazione */
 .status-cell.booking-start:not(.status-blocked) {
-  box-shadow: inset 20px 0 0 0 #ffffff !important;
+  box-shadow: inset 20px 0 0 0 #dbdbdb !important;
 }
 
 .status-cell.booking-end {
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
 }
 
 /* Contenitore del testo in Absolute */

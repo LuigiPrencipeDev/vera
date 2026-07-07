@@ -69,7 +69,7 @@ console.log('test')
     margin: 20px;
     background-color: #fff;
     border-radius: 25px;
-    padding: 25px;
+    padding: 45px;
     position: relative;
     font-family: "Montserrat", sans-serif;
 }

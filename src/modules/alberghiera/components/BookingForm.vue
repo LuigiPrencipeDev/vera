@@ -47,7 +47,7 @@
                 Visualizza le stanze disponibili per le date selezionate.
             </div>
             <div class="mt-3">
-                <table class="tableCustom">
+                <table class="tableCustom w-100">
                     <thead class="theadCustom">
                         <tr>
                             <th>Stanza</th>
@@ -187,6 +187,78 @@
             </div>
 
 
+        </div>
+
+        <div class="mt-5">
+            <b>Modalità di Pagamento</b>
+            <div class="miniText">
+                Aggiungi eventuali note alla prenotazione.
+            </div>
+            <div class="d-flex align-items-center gap-5 inputGroup">
+                <div class="d-flex align-items-center gap-3">
+                    <div class="pt-3">
+                        <i style="font-weight: 600; font-size: 20px; color: #000;" class="bi bi-cash-coin"></i>
+                    </div>
+                    <div>
+                        <label for="">Pagamento</label>
+                        <select style="width: 250px;">
+                            <option value="">Seleziona</option>
+                            <option value="Bonifico BPM">Bonifico BPM</option>
+                            <option value="Bonifico Unicredit">Bonifico Unicredit</option>
+                            <option value="Contanti">Contanti (già saldato)</option>
+
+                        </select>
+                    </div>
+                </div>
+
+                <div class="d-flex align-items-center gap-3">
+                    <div class="pt-3">
+                        <i style="font-weight: 600; font-size: 20px; color: #000;" class="bi bi-stopwatch"></i>
+                    </div>
+                    <div>
+                        <label for="">Scadenza</label>
+                        <input type="date" id="checkin">
+                    </div>
+                </div>
+                <div class="d-flex align-items-center gap-3">
+                    <div class="pt-3">
+                        <i style="font-weight: 600; font-size: 20px; color: #000;" class="bi bi-currency-euro"></i>
+                    </div>
+                    <div>
+                        <label for="">Acconto</label>
+                        <select style="width: 250px;">
+                            <option value="no">No</option>
+                            <option value="Acconto 30%">Acconto 30%</option>
+                            <option value="Acconto 50%">Acconto 50%</option>
+                            <option value="personalizzato">Acconto personalizzato</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center gap-3">
+                    <div>
+                        <label for="">Importo</label>
+                        <input type="number" id="checkin" placeholder="0.00">
+                    </div>
+                </div>
+
+            </div>
+
+            <div>
+                <div class="boxDetailsPayment">
+                    <div><b>Bonifico BPM</b></div>
+                    <div>
+                        <div class="miniText">
+                            IBAN: IT12A1234567890123456789012 (Banca BPM)
+                        </div>
+                        <div class="miniText">
+                            Intestato a: Rossi Mario
+                        </div>
+                        <div class="miniText">
+                            Causale: Prenotazione camera 103 - Suite
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div class="boxedResume">
@@ -339,13 +411,18 @@
                     </label>
 
                     <div class="inputGroup">
-                        <textarea rows="5" readonly>
+                        <textarea rows="10" readonly>
 Cliente richiede una camera ai piani alti con vista mare.
 Arrivo previsto dopo le ore 20:00.
 Intolleranza al glutine comunicata in fase di prenotazione.
                         </textarea>
                     </div>
 
+                </div>
+
+                <div class="d-flex align-items-center justify-content-center gap-3 mt-4">
+                    <button class="boxSmallAction">Annulla</button>
+                    <button class="generalButton">Salva e Invia preventivo</button>
                 </div>
 
             </div>
@@ -378,7 +455,10 @@ export default {
 }
 
 .tableCustom {
-    border: 1px solid #dadada;
+    border:0 !important;
+    border-radius: 10px;
+    overflow: hidden;
+    outline: 1px solid #dadada;
 }
 
 .tableCustom button {
@@ -390,6 +470,10 @@ export default {
     min-width: 140px;
     padding: 8px 10px;
     font-size: 12px;
+}
+
+.tableCustom tr:not(:last-child) {
+    border-bottom: 1px solid #dadada;
 }
 
 .theadCustom {
@@ -428,7 +512,7 @@ export default {
     padding: 20px;
     background-color: #f5f5f5;
     border-radius: 15px;
-    margin-top: 20px;
+    margin-top: 50px;
 }
 
 .boxedResume td {
@@ -443,6 +527,19 @@ export default {
 }
 
 .boxedResume .inputGroup {
-    margin:0;
+    margin: 0;
+}
+
+.boxDetailsPayment {
+    background-color: #f5f5f5;
+    padding: 20px 30px;
+    border-radius: 10px;
+    display: inline-block;
+    border: 1px dashed #d1d1d1;
+    margin-top: 15px;
+}
+
+.boxDetailsPayment b {
+    font-size: 12px;
 }
 </style>
