@@ -55,7 +55,7 @@
 }
 
 .miniText {
-  font-size: 12px;
+  font-size: 12px !important;
   color: #6d6d6d;
 }
 
@@ -88,7 +88,7 @@
 
   box-shadow:
     /* Ombra esterna più ampia e scura per sollevare il box */
-    12px 12px 24px rgba(0, 0, 0, 0.2),
+    /* 12px 12px 24px rgba(0, 0, 0, 0.2), */
     /* Riflesso interno superiore più brillante */
     inset 3px 3px 6px rgba(255, 255, 255, 0.6),
     /* Ombra interna inferiore più marcata per il 3D */

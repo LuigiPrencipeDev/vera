@@ -17,8 +17,18 @@ body {
 .inputGroup select {
   border: 1px solid #d1d1d1;
   padding: 5px 15px;
-  border-radius: 100px;
+  border-radius: 10px;
   font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.inputGroup textarea {
+  border: 1px solid #d1d1d1;
+  padding: 5px 15px;
+  border-radius: 15px;
+  font-size: 13px;
   display: flex;
   flex-direction: column;
   width: 100%;

@@ -51,8 +51,8 @@ export default {
             </div>
 
             <div class="d-flex align-items-center gap-2">
-                <button class="boxSmallAction" @click="openModal('BookingForm', 'Nuova Prenotazione', 'Compila i dettagli per la nuova prenotazione')">+
-                    Prenotazione/Preventivo</button>
+                <button class="boxSmallAction" @click="openModal('BookingForm', 'Nuovo Preventivo', 'Compila i dettagli per la nuova prenotazione')">+
+                    Preventivo</button>
                 <button class="boxSmallAction">Blocca camere</button>
                 <button class="boxSmallAction">Attesa di conferma</button>
             </div>
