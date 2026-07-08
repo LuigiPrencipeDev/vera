@@ -33,7 +33,7 @@
                 'booking-start': isFirstDayOfBooking(room.id, day),
                 'booking-end': isLastDayOfBooking(room.id, day)
               }
-            ]"  @click="openModal('BookingForm', 'Prenotazione: ' + (getBooking(room.id, day).guest || '⚠️ Bloccata'), 'Dettagli di prenotazione per '+ room.name)">
+            ]"  @click="openModal('GetSingleBooking', 'Prenotazione: ' + (getBooking(room.id, day).guest || '⚠️ Bloccata'), 'Dettagli di prenotazione per '+ room.name)">
               <div v-if="isFirstDayOfBooking(room.id, day)" class="booking-text-wrapper"
                 :style="getDynamicWidthStyle(room.id, day)">
                 <span class="booking-text">
@@ -62,6 +62,7 @@
 
 <script>
 import GeneralModal from "../../../components/GeneralModal.vue";
+import GetSingleBooking from "../components/GetSingleBooking.vue";
 export default {
   data() {
     return {
@@ -212,7 +213,8 @@ export default {
     };
   },
   components: {
-    GeneralModal
+    GeneralModal,
+    GetSingleBooking
   },
   computed: {
     daysInMonth() {

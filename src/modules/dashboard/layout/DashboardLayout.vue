@@ -40,11 +40,11 @@ export default {
       <div class="d-flex flex-column containerAsideMenu ps-4 pb-5 pe-3"
         style="margin-top: 80px; overflow: auto; height: calc(100vh - 150px);">
         <div class="mb-5">
-          <span style="font-size: 20px;font-weight: 800; color: var(--primary-color) !important;">
-            Dashboard <i class="bi bi-question-circle"></i>
+          <span style="font-size: 20px;font-weight: 800; color: #000 !important;" class="d-flex align-items-end gap-2">
+            Ciao, Luigi <img src="/images/handHello1.png" width="40px" alt="User">
           </span>
           <div>
-            17/10/2025 - 10:20
+            <i class="bi bi-building"></i> Prensys
           </div>
         </div>
         <router-link to="/dashboard" class="activeRouter">

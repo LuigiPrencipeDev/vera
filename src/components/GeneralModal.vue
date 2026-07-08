@@ -1,3 +1,32 @@
+<!--
+👇 ISTRUZIONI PER UTILIZZARE LA MODALE 
+import GeneralModal from "../../../components/GeneralModal.vue";
+
+data() {
+    return {
+        isModalOpen: false,
+        activeComponent: null, // 3. Stato per tracciare QUALE componente mostrare
+        currentTitle: "",
+        currentSubtitle: ""
+    };
+},
+
+
+methods: {
+    openModal(componentName, title, subtitle = "") {
+        this.activeComponent = componentName;
+        this.currentTitle = title;
+        this.currentSubtitle = subtitle;
+        this.isModalOpen = true;
+    },
+    closeModal() {
+        this.isModalOpen = false;
+        this.activeComponent = null;
+        this.currentTitle = "";
+        this.currentSubtitle = "";
+    }
+} -->
+
 <script setup>
 defineProps({
     title: {
@@ -65,7 +94,7 @@ console.log('test')
 
 .modalContainer {
     width: 100%;
-    max-width: 1400px;
+    max-width: 1500px;
     margin: 20px;
     background-color: #fff;
     border-radius: 25px;

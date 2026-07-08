@@ -38,7 +38,10 @@ input:focus-visible {
   outline: 2px solid #20986e;
 }
 
-
+.Vdisable{
+  opacity: 0.6 !important;
+  pointer-events: none !important;
+}
 
 a {
   color: #20986e !important;
@@ -145,6 +148,7 @@ a {
   background-color: #f6f6f6;
   border-radius: 10px;
   border: 0;
+  text-decoration: none;
 }
 
 .boxSmallAction:hover{
