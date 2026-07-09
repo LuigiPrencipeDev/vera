@@ -57,50 +57,50 @@ export default {
 
             <div class="moduleList OFFICINE" :class="{ activeModule: openModules.OFFICINE }">
               <div @click="toggleModule('OFFICINE')" style="cursor: pointer;">
-                <i class="bi pe-2" :class="openModules.OFFICINE ? 'bi-arrow-90deg-up' : 'bi-arrow-return-right'"></i>Gestionale Officine
+                <i class="bi pe-2" :class="openModules.OFFICINE ? 'bi-arrow-90deg-up' : 'bi-arrow-return-right'"></i>Gestione Officine
               </div>
               <router-link to="/officina">
-                Dashboard
+                <i class="bi bi-graph-up-arrow pe-2"></i> Dashboard
               </router-link>
               <router-link to="/officina/calendario" class="mt-1">
-                Calendario
+                <i class="bi bi-calendar2-check pe-2"></i> Calendario
               </router-link>
               <router-link to="/officina/clienti" class="mt-1">
-                Lista Clienti
+                <i class="bi bi-people pe-2"></i> Lista Clienti
               </router-link>
               <router-link to="/officina/auto-sostitutiva" class="mt-1">
-                Auto sostitutiva
+                <i class="bi bi-car-front-fill pe-2"></i> Auto sostitutiva
               </router-link>
               <router-link to="/officina/lavorazione" class="mt-1">
-                + Agg. lavorazione
+                <i class="bi bi-plus pe-2"></i> Agg. lavorazione
               </router-link>
             </div>
 
 
             <div class="moduleList DIPENDENTI" :class="{ activeModule: openModules.DIPENDENTI }">
               <div @click="toggleModule('DIPENDENTI')" style="cursor: pointer;">
-                <i class="bi pe-2" :class="openModules.DIPENDENTI ? 'bi-arrow-90deg-up' : 'bi-arrow-return-right'"></i> Gestionale Dipendenti
+                <i class="bi pe-2" :class="openModules.DIPENDENTI ? 'bi-arrow-90deg-up' : 'bi-arrow-return-right'"></i> Gestione Dipendenti
               </div>
               <router-link to="/dipendenti">
-                Dashboard
+                <i class="bi bi-graph-up-arrow pe-2"></i> Dashboard
               </router-link>
               <router-link to="/dipendenti/presenze" class="mt-1">
-                Presenze
+                <i class="bi bi-person-lines-fill pe-2"></i> Presenze
               </router-link>
               <router-link to="/dipendenti/calendario-ferie-permessi" class="mt-1">
-                Calendario ferie permessi
+                <i class="bi bi-calendar2-check pe-2"></i> Calendario assenze
               </router-link>
               <router-link to="/dipendenti/note-spese" class="mt-1">
-                Note spese
+                <i class="bi bi-file-earmark-text pe-2"></i> Note spese
               </router-link>
               <router-link to="/dipendenti/timbratore" class="mt-1">
-                Timbratore
+                <i class="bi bi-clock pe-2"></i> Timbratore
               </router-link>
               <router-link to="/dipendenti/nuovo-dipendente" class="mt-1">
-                + Nuovo dipendente
+                <i class="bi bi-person-plus pe-2"></i> Nuovo dipendente
               </router-link>
               <router-link to="/dipendenti/mansioni" class="mt-1">
-                + Crea mansioni
+                <i class="bi bi-list-task pe-2"></i> Crea mansioni
               </router-link>
             </div>
 
@@ -109,13 +109,16 @@ export default {
                 <i class="bi pe-2" :class="openModules.ALBERGO ? 'bi-arrow-90deg-up' : 'bi-arrow-return-right'"></i> Gestione Alberghiera
               </div>
               <router-link to="/albergo">
-                Dashboard
+                <i class="bi bi-graph-up-arrow pe-2"></i> Dashboard
               </router-link>
               <router-link to="/albergo/calendario" class="mt-1">
-                Calendario
+                <i class="bi bi-calendar2-check pe-2"></i> Calendario
               </router-link>
-              <router-link to="/albergo/nuova-prenotazione" class="mt-1">
-                Nuova Prenotazione
+              <router-link to="/albergo/ristorante" class="mt-1">
+                <i class="bi bi-fork-knife pe-2"></i> Ristorante
+              </router-link>
+              <router-link to="/albergo/bar" class="mt-1">
+                <i class="bi bi-cup-straw pe-2"></i> Bar
               </router-link>
               
             </div>

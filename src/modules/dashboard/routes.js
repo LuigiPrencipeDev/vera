@@ -114,9 +114,14 @@ export default [
               component: () => import("@/modules/alberghiera/pages/AlbergoCalendario.vue")
           },
           {
-            path: "nuova-prenotazione", // ✅ CORRETTO
-            name: "albergo-nuova-prenotazione",
-            component: () => import("@/modules/alberghiera/pages/AlbergoNuovaPrenotazione.vue")
+            path: "ristorante", // ✅ CORRETTO
+            name: "albergo-ristorante",
+            component: () => import("@/modules/alberghiera/pages/AlbergoRistorante.vue")
+          },
+          {
+            path: "Bar", // ✅ CORRETTO
+            name: "albergo-bar",
+            component: () => import("@/modules/alberghiera/pages/AlbergoBar.vue")
           }
         ],
       },

@@ -2,74 +2,30 @@
 
     <div>
 
-        <div class="mt-5 Vdisable">
+        <div class="mt-5 ">
             <b>Modalità di Pagamento</b>
             <div class="miniText">
                 Aggiungi eventuali note alla prenotazione.
             </div>
-            <div class="d-flex align-items-center gap-5 inputGroup">
-                <div class="d-flex align-items-center gap-3">
-                    <div class="pt-3">
-                        <i style="font-weight: 600; font-size: 20px; color: #000;" class="bi bi-cash-coin"></i>
-                    </div>
-                    <div>
-                        <label for="">Pagamento</label>
-                        <select style="width: 250px;">
-                            <option value="">Seleziona</option>
-                            <option value="Bonifico BPM">Bonifico BPM</option>
-                            <option value="Bonifico Unicredit">Bonifico Unicredit</option>
-                            <option value="Contanti">Contanti (già saldato)</option>
 
-                        </select>
-                    </div>
-                </div>
-
-                <div class="d-flex align-items-center gap-3">
-                    <div class="pt-3">
-                        <i style="font-weight: 600; font-size: 20px; color: #000;" class="bi bi-stopwatch"></i>
-                    </div>
-                    <div>
-                        <label for="">Scadenza</label>
-                        <input type="date" id="checkin">
-                    </div>
-                </div>
-                <div class="d-flex align-items-center gap-3">
-                    <div class="pt-3">
-                        <i style="font-weight: 600; font-size: 20px; color: #000;" class="bi bi-currency-euro"></i>
-                    </div>
-                    <div>
-                        <label for="">Acconto</label>
-                        <select style="width: 250px;">
-                            <option value="no">No</option>
-                            <option value="Acconto 30%">Acconto 30%</option>
-                            <option value="Acconto 50%">Acconto 50%</option>
-                            <option value="personalizzato">Acconto personalizzato</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="d-flex align-items-center gap-3">
-                    <div>
-                        <label for="">Importo</label>
-                        <input type="number" id="checkin" placeholder="0.00">
-                    </div>
-                </div>
-
-            </div>
-
-            <div>
-                <div class="boxDetailsPayment">
+            <div class="d-flex align-items-center gap-3">
+                <div class="boxDetailsPayment ">
                     <div><b>Bonifico BPM</b></div>
                     <div>
                         <div class="miniText">
                             IBAN: IT12A1234567890123456789012 (Banca BPM)
                         </div>
                         <div class="miniText">
-                            Intestato a: Rossi Mario
+                            Intestato a: Luigi Prencipe
                         </div>
                         <div class="miniText">
-                            Causale: Prenotazione camera 103 - Suite
+                            Causale: Prenotazione camera 103 - Suite - Mario Bianchi
                         </div>
                     </div>
+                </div>
+                <div class="boxDetailsPayment" style="cursor: pointer;">
+                    <div><b>Visualizza allegato</b></div>
+                    
                 </div>
             </div>
         </div>

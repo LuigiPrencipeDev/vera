@@ -17,7 +17,7 @@ const fatturato = [19000, 28000,55000, 42000, 57450, 84500]
         </div> -->
         <div class="fatturatoYTD">
           <div class="numberStyleGeneral">
-            &euro;84.500<span>,82</span>
+            &euro;2.144.500<span>,82</span>
           </div>
           <div class="scostamentoPercFatturatoYTD">
             <i class="bi bi-arrow-up-short"></i>4.2%
