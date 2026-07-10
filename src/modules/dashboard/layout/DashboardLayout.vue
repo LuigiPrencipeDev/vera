@@ -114,6 +114,9 @@ export default {
               <router-link to="/albergo/calendario" class="mt-1">
                 <i class="bi bi-calendar2-check pe-2"></i> Calendario
               </router-link>
+              <router-link to="/albergo/calendario" class="mt-1">
+                <i class="bi bi-list pe-2"></i> Menu Digitale
+              </router-link>
               <router-link to="/albergo/ristorante" class="mt-1">
                 <i class="bi bi-fork-knife pe-2"></i> Ristorante
               </router-link>
