@@ -68,7 +68,7 @@ const calendarOptions = {
     font-size: 11px;
 }
 
-.fc-day-sat,.fc-day-sun{
+/* .fc-day-sat, */.fc-day-sun{
     background-color: #f9fafb ;
 }
 </style>

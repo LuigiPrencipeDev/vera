@@ -24,7 +24,7 @@ export default {
         })
 
         // Marker esempio
-        L.marker([41.9028, 12.4964], { icon: customIcon })
+        L.marker([44.4949, 11.3426], { icon: customIcon })
             .addTo(map)
         /* .bindPopup('Roma')
         .openPopup() */
