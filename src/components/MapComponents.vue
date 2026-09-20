@@ -8,10 +8,10 @@ export default {
     mounted() {
 
         // Creazione mappa
-        const map = L.map('map').setView([41.9028, 12.4964], 13)
+        const map = L.map('map').setView([42.5042, 12.5657], 5)
 
         // Tile layer OpenStreetMap
-        L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '&copy; OpenStreetMap contributors'
         }).addTo(map)
 
